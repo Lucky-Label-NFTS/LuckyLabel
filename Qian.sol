@@ -14,7 +14,7 @@ import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 import "@openzeppelin/contracts/utils/Context.sol";
 
 
-contract Qian is ERC721, ERC721Enumerable, ERC721URIStorage, VRFConsumerBaseV2Plus {
+contract LuckyLabel is ERC721, ERC721Enumerable, ERC721URIStorage, VRFConsumerBaseV2Plus {
     uint256 private _nextTokenId;
 
     // 新增：积分相关变量
@@ -50,7 +50,7 @@ contract Qian is ERC721, ERC721Enumerable, ERC721URIStorage, VRFConsumerBaseV2Pl
 
     mapping (uint256 => uint256 ) public requestIdToTokenId;
 
-    constructor(uint256 subscriptionId) ERC721("Qian", "MTK") VRFConsumerBaseV2Plus(0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B){
+    constructor(uint256 subscriptionId) ERC721("LuckyLabel", "MTK") VRFConsumerBaseV2Plus(0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B){
         COORDINATOR = IVRFCoordinatorV2Plus(0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B);
         s_subscriptionId = subscriptionId;
     }
